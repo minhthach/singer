@@ -8,9 +8,9 @@ router.get('/list', (req, res) => {
 })
 
 router.get('/update/:id', (req, res) => {
-    const selectedId = req.params
+    const selectedId = req.params // Sử dụng object {} để nhận về giá trị số
     const selectedSinger = arrSinger.filter(Singer => Singer.id === parseInt(selectedId.id))
-    res.render('update', {selectedSinger, domainImg, domainLink})
+    !Singer ? res.send({ error: 'Singer not found'}) : res.render('update', {selectedSinger, domainImg, domainLink})
 })
 
 router.post('/update-singer/:id', (req, res) => {
