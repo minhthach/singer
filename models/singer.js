@@ -4,7 +4,7 @@ class Singer {
         this.name = name;
         this.link = link;
         this.image = image;
-    }
+    } 
     // getInfo() {
     //     let info = [];
     //     return info = [this.id, this.name, this.image, this.link]
